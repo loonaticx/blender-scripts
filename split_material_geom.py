@@ -67,7 +67,7 @@ def separate_mesh_by_material():
         new_obj = bpy.context.selected_objects[-1]
         sanitized_name = sanitize_name(material.name)
         new_obj.name = sanitized_name
-        new_obj.data.name = f"Mesh_{sanitized_name}"
+        new_obj.data.name = f"{sanitized_name}"
 
         # Assign only the relevant material to the new object
         new_obj.data.materials.clear()
@@ -80,7 +80,7 @@ def separate_mesh_by_material():
     # Return to object mode when done
     bpy.ops.object.mode_set(mode='OBJECT')
     print("Separation complete.")
-    
+
 
 # Run the function
 separate_mesh_by_material()
