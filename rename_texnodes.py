@@ -1,6 +1,6 @@
 """
 Use to sanitize material names and image names in Blender.
-Renames them to the name of the image file, differnetiated by "_MTL" and "_IMG" suffixes.
+Renames them to the name of the image file, differentiated by "_MTL" and "_IMG" suffixes.
 
 """
 
@@ -17,10 +17,9 @@ def rename_texnodes():
                     image_filepath = node.image.filepath.replace("//", "")
                     image_basename = os.path.basename(image_filepath)
                     image_filename = os.path.splitext(image_basename)[0]
-                    # "_Mtl" suffix because blender doesn't like anything with identical names
-                    new_material_name = f"{image_filename}_MTL"
+                    new_material_name = f"{image_filename}"
                     material.name = new_material_name
-                    new_image_name = f"{image_filename}_IMG"
+                    new_image_name = f"{image_filename}"
                     node.image.name = new_image_name
                     break
 
