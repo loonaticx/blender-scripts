@@ -13,7 +13,8 @@ def rename_texnodes():
         if material.node_tree:
             for node in material.node_tree.nodes:
                 if node.type == 'TEX_IMAGE' and node.image:
-                    image_filepath = node.image.filepath
+                    # replace assets with // since that prolly implies its stored in the file itself
+                    image_filepath = node.image.filepath.replace("//", "")
                     image_basename = os.path.basename(image_filepath)
                     image_filename = os.path.splitext(image_basename)[0]
                     # "_Mtl" suffix because blender doesn't like anything with identical names
