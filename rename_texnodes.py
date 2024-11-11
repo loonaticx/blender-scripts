@@ -1,7 +1,5 @@
 """
-Use to sanitize material names and image names in Blender.
-Renames them to the name of the image file, differentiated by "_MTL" and "_IMG" suffixes.
-
+Used to sanitize material names and image names by renaming them to the name of the image file.
 """
 
 import bpy
