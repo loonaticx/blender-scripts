@@ -2,7 +2,7 @@
 Used to split out meshes by material into separate objects.
 Also renames the objects to match the material names.
 
-Note: Recommended to run the material_rename.py script first to sanitize material names.
+Note: Recommended to run the rename_texnodes.py script first to sanitize material names.
 """
 
 import bpy
